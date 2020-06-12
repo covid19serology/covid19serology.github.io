@@ -16,7 +16,22 @@ body {
 }
 
 #specsens{
-	width:80%
+	width:60%
+}
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+  font-family: Georgia
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
 }
 
 h2 {
