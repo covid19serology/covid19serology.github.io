@@ -1,4 +1,4 @@
-<!-- Code from d3-graph-gallery.com -->
+
 <!DOCTYPE html>
 <meta charset="utf-8">
 
@@ -13,16 +13,15 @@
 
     <div class="maincontent">
 
-      <center><p id="class">Stanford CS 472 (SCHOOL PROJECT WORK IN PROGRESS)</p></center>
+      <center><p id="class">Stanford CS 472</p></center>
       
       <center><p id="title">COVID-19 Serology Study Design and Exploration</p></center>
 
-      <center><p id="date">JUNE 9, 2020</p></center>
+      <center><p id="date">JUNE 12, 2020</p></center>
 
        <p class="pagetext">“Serology,” “seroprevalence,” and “antibody tests” are all buzzy words getting a lot of media attention lately. What do they mean, and, more importantly, what do the results of these studies tell us?
        </p>
-
-       <p class="pagetext">Serology is the study or examination of blood serum, and this component of blood carries antibodies, which serve as both markers of past infection (or vaccination) and defenders against future infection. Recent studies use specialized tests to detect the presence of antibodies specifically against Sars-Cov-2, the virus that causes Covid-19. These tests can give us information about the number of people who have antibodies against Sars-Cov-2, which can help answer both biological and policy questions: How long do people maintain immunity against this virus? What fraction of our local societies potentially have protective antibodies? Is it safe to open certain types of businesses? </p>
+       <p class="pagetext">Serology is the study or examination of blood serum, and this component of blood carries antibodies, which serve as both markers of past infection (or vaccination) and defenders against future infection. Recent studies use specialized tests to detect the presence of antibodies specifically against SARS-CoV-2, the virus that causes Covid-19. These tests can give us information about the number of people who have antibodies against SARS-CoV-2, which can help answer both biological and policy questions: How long do people maintain immunity against this virus? What fraction of our local societies potentially have protective antibodies? Is it safe to open certain types of businesses? </p>
       
 
       <p class="pagetext">However, the answers in this emerging research are not clear-cut, but are complicated by a number of uncertainties. We’ll step through these below.</p>
@@ -32,9 +31,9 @@
 
       <p class="pagetext">Many of these serology studies use different test kits, which adds some uncertainty to the results. Like most things, antibody tests have some error rate, which is often described by two terms:</p>
       
-      <p class="pagetext"><strong>Specificity</strong>, or how specific the test is, describes whether the test reacts only to Sars-Cov-2 (and thus a positive result always denotes an infected individual), or whether it can be triggered by other things in someone’s blood (such as antibodies against another coronavirus, like the one that caused sars or one that causes the common cold). A low specificity means that some positive results will be false positives.
+      <p class="pagetext"><strong>Specificity</strong>, or how specific the test is, describes whether the test reacts only to SARS-CoV-2 (and thus a positive result always denotes an infected individual), or whether it can be triggered by other things in someone’s blood (such as antibodies against another coronavirus, like the one that caused SARS or one that causes the common cold). A low specificity means that some positive results will be false positives.
   </p> 
-      <p class="pagetext"> <strong>Sensitivity</strong>, or how sensitive the test is, describes whether the test always correctly detects someone with Sars-Cov-2 antibodies, or whether some go undetected. A low sensitivity means that some negative results will be false negatives. 
+      <p class="pagetext"> <strong>Sensitivity</strong>, or how sensitive the test is, describes whether the test always correctly detects someone with SARS-CoV-2 antibodies, or whether some go undetected. A low sensitivity means that some negative results will be false negatives. 
  </p>
 
       <center><img id="specsens" src="static/imagespecsens.png"></center>
@@ -42,16 +41,55 @@
       <p class="pagetext"> Many good tests have specificities in the high 90s (as a percent), and about 90% sensitivities. You can explore how these errors change how many people one needs to sample: </p>
     </div>
 
-      <center>
-      <script type='text/javascript' src='https://us-west-2b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1000px; height: 827px;'><object class='tableauViz' width='1000' height='827' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-west-2b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;serologystudydesigndashboard' /><param name='name' value='SerologyDashboard&#47;Dashboard2SAMPLESIZE' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
-      </center>
+    <center>
+    <div class='tableauPlaceholder' id='viz1591913893666' style='position: relative; width:60%'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;serology_dashboard_v20200611&#47;plot1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='serology_dashboard_v20200611&#47;plot1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;se&#47;serology_dashboard_v20200611&#47;plot1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1591913893666');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                        var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </center>
+
+      
 
     <div class="maincontent">
-      <p class="pagetext">You can easily imagine that if 9 out of 10 (90%) of people have antibodies, you can get a pretty good estimate of this after testing only a couple dozen people. But if only 1 out of 100 people have antibodies, you will need to test far more people in order to accurately determine this. This is reflected in the plot above, where you can see the minimal sample size drops as the population prevalence you need to detect increases.</p>
+      <p class="pagetext">You can easily imagine that if 9 out of 10 (90%) of people have antibodies, you can get a pretty good estimate of this after testing only a couple dozen people. But if only 1 out of 100 people have antibodies, you will need to test far more people in order to accurately determine this. This is reflected in the plot above, where you can see the minimum sample size drops as the population prevalence you need to detect increases. A higher minimum sample size is required for lower specificity and sensitivity, given a fixed prevalence rate. </p>
+
+      <p class="pagetext">
+        The test sensitivities, specificities, and sample sizes for a few real studies conducted in the US in April and May 2020 are below:
+      </p>
+
+      <table >
+        <tbody>
+          <tr>
+            <th> </th>
+            <th> Sample population size</th>
+            <th> Test specificity</th>
+            <th> Test sensitivity</th>
+            <th> Tested prevalence rate</th>
+          </tr>
+          <tr>
+            <td> New York State</td>
+            <td> 15000</td>
+            <td> 0.996</td>
+            <td> 0.793</td>
+            <td> 0.123</td>
+          </tr>
+          <tr>
+            <td> Santa Clara</td>
+            <td> 3300</td>
+            <td> 0.994</td>
+            <td> 0.918</td>
+            <td> 0.015</td>
+          </tr>
+          <tr>
+            <td> Los Angeles</td>
+            <td> 865</td>
+            <td> 0.994</td>
+            <td> 0.918</td>
+            <td> 0.04</td>
+          </tr>
+        </tbody>
+      </table>
 
       <h2>Who should be sampled?</h2>
 
-      <p class="pagetext">Ideally, when you sample people to have a serology test, you will sample randomly from your population; that is, every individual will have the same chance of being sampled. If you have sampled randomly (and your test is perfect), then the prevalence of COVID-19 antibodies in your sample should reflect the prevalence of COVID-19 antibodies in your population.</p>
+      <p class="pagetext">Ideally, when you sample people to have a serology test, you will sample randomly from your population; that is, every individual will have the same chance of being sampled. If you have sampled randomly (and your test is perfect), then the prevalence of people with antibodies against SARS-CoV-2in your sample should reflect the prevalence of people with antibodies against SARS-CoV-2 antibodies in your population.</p>
 
       <p class="pagetext">However, getting a truly random sample is difficult, and we may inadvertently over- or undersample individuals who had COVID-19. For example, we may oversample those who had COVID-19 because taking a serology test may be more attractive to them. Alternatively, we may undersample those who had COVID-19 by sampling from a neighborhood or region with a particularly low COVID-19 prevalence. We refer to this over- and under-sampling as “bias”, and different study designs will have different levels of bias.</p>
 
@@ -70,27 +108,31 @@
 
       <p class="pagetext"> On the left, we simulate testing 100 people from a population that is truly 5% positive for antibodies. You can see if we run this test many times, we get many different estimates for the true positive rate, just because we picked different people. </p>
 
-      <p class="pagetext"> Most of the time it’s around 5%, but sometimes it’s 1%, and sometimes it’s 12%. Because it’s a simulation, it’s easy to run many times, but real tests are expensive and time consuming to conduct, so testing the right number of people is important. On the right you can see what happens if we instead simulate testing 1000 people. In this case, we get much closer to the right answer (5%) much more often.  This simulation is referred to as the bootstrap. </p>
+      <p class="pagetext"> Most of the time it’s around 5%, but sometimes it’s 1%, and sometimes it’s 12%. Because it’s a simulation, it’s easy to run many times, but real tests are expensive and time consuming to conduct, so testing the right number of people is important. On the right you can see what happens if we instead simulate testing 1000 people. In this case, we get much closer to the right answer (5%) much more often.</p>
 
-      <p class="pagetext"> Now, suppose you have test results for a random sample of your population. Instead of simulating testing like we did above, you can resample from your test results. If you tested 100 people, you will form a “new sample of 100 people” by choosing 100 people at random from your sample (and in doing so, you may sample the same person multiple times). If you repeat this process many times, you will again see a distribution like those above.  </p>
+      <p class="pagetext"> Now, suppose you have test results for a random sample of your population. Instead of simulating testing like we did above, you can resample from your test results. This is like putting all 100 test results in a hat, and one by one, choosing out a result from the hat, reading it, and putting it back in and mixing until you have a new set of 100 results. Some results will be read twice, and some not at all. This is one way to estimate how different your answer might be if you did the experiment again. If you repeat this process many times, you will again see a distribution like those above. This simulation is referred to as the bootstrap. </p>
 
-      <p class="pagetext"> We can use this idea to adjust for bias in our sample. Suppose we know that we oversampled people with COVID-19 antibodies - we may think that our sample has twice as many people with COVID-19 antibodies as the general population. Before we resample from our test results (as we did above), we can change half of our observed positive tests to negative tests. This allows us to adjust our estimate of COVID-19 prevalence to account for bias in our sampling method. </p>
+      <p class="pagetext"> We can use this idea to adjust for bias in our sample. Suppose we know that we oversampled people with antibodies against SARS-CoV-2 - we may think that our people in our sample are twice as likely to have antibodies against SARS-CoV-2 as the general population. This may have happened, for example, because people with symptoms were more excited to participate and get a test. Before we resample from our test results (as we did above), we can change half of our observed positive tests to negative tests. This allows us to adjust our estimate of COVID-19 prevalence to account for bias in our sampling method. </p>
 
        <p class="pagetext"> We have one more adjustment to make: we recall that our tests aren’t perfect - each test has a sensitivity and specificity, and we can incorporate the test’s sensitivity and specificity into our bootstrapping. The test manufacturers report the number of positive and negative samples from their validation tests; we resample these to obtain estimates of sensitivity and specificity that we use to estimate the COVID-19 population prevalence. </p>
 
-       <p class="pagetext"> You can explore how changing bias affects your estimate of COVID-19 prevalence below. We’ll note that when bias is 1, we assume there is no bias - we have a true random sample. When bias is less than 1, we assume that people who had COVID-19 were less likely to take the serology test, and we adjust our estimate accordingly. Similarly, when bias is greater than 1, we assume that people who had COVID-19 were more likely to take the serology test. </p>
+       <p class="pagetext"> You can explore how changing bias affects your estimate of COVID-19 prevalence below. We’ll note that when bias is 1, we assume there is no bias - we have a true random sample. When bias is less than 1, we assume that people who had COVID-19 were less likely to take the serology test, and we adjust our estimate accordingly. Similarly, when bias is greater than 1, we assume that people who had COVID-19 were more likely to take the serology test. So a bias of 0.5 means we cut the number of positive tests in half, and a bias of 2 means we double it. </p>
 
     </div>
 
+    
+
     <center>
-    <script type='text/javascript' src='https://us-west-2b.online.tableau.com/javascripts/api/viz_v1.js'></script><div class='tableauPlaceholder' style='width: 1000px; height: 827px;'><object class='tableauViz' width='1000' height='827' style='display:none;'><param name='host_url' value='https%3A%2F%2Fus-west-2b.online.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='&#47;t&#47;serologystudydesigndashboard' /><param name='name' value='SerologyDashboard&#47;Dashboard3BOOTSTRAPPING' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='showAppBanner' value='false' /></object></div>
-    </center>
+
+        <div class='tableauPlaceholder' id='viz1591913796265' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SerologyDashboard&#47;Dashboard3BOOTSTRAPPING&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SerologyDashboard&#47;Dashboard3BOOTSTRAPPING' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Se&#47;SerologyDashboard&#47;Dashboard3BOOTSTRAPPING&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1591913796265');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} else { vizElement.style.width='100%';vizElement.style.height='777px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      </center>
 
 
 
     <div class="maincontent">
 
-       <p class="pagetext">Closing + [Add link to paper here?]</p>
+       <p class="pagetext">As you can imagine, it’s difficult to know exactly how biased a sample is, but you can start to think about what may cause bias. People who are at high risk, who are trying to limit their trips outside, might be less willing to participate in a test, while people who think they’ve been exposed to the virus already might be more willing. Which neighborhoods tests are conducted in, how participants are recruited, and how time-consuming testing is may also influence bias. The tools above illustrate several factors which influence serology study results: test specificity and sensitivity, sample size, and sample bias. One thing that these results illustrate is that answers are uncertain. Depending on what question we’re trying to answer, we may be able to accept different levels of uncertainty. If somewhere between 10 and 20 percent of the population has antibodies, for example, we know, even without knowing the exact percent, that a lot of people are still susceptible to the virus and we’ll still have to be careful to wear masks and keep distance to prevent spread. A lot is uncertain during this time, and scientific serology studies help reduce this uncertainty, but they don’t eliminate it. So when we see serology results being reported in the news, we should stop to ask: how precise are the tests? How many people were tested? And how biased was the sample group?</p>
+
 
     <p class="pagetext"> <i>Team:</i> Margaret Antonio, Erin Craig, Cayla Miller, Lijing Wang, and Utkarsh Tandon </p>
 
